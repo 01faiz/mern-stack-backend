@@ -12,16 +12,7 @@ const usersSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    email: {
-        type: String,
-        required: true,
-        unique: true,
-        validate(value) {
-            if (!validator.isEmail(value)) {
-                throw Error("not valid email")
-            }
-        }
-    },
+
     mobile: {
         type: String,
         required: true,
